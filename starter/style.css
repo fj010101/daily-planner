@@ -5,8 +5,8 @@ body {
 }
 
 textarea {
-  background: transparent;
-  border: none;
+  background: hsla(193, 41%, 84%, 0.054);
+  border: solid;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
@@ -40,7 +40,7 @@ header {
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border-top: 1px solid #000000;
 }
 
 .past {
@@ -49,12 +49,12 @@ header {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: hsl(3, 100%, 69%);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: hsl(120, 60%, 67%);
   color: white;
 }
 
