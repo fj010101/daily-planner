@@ -1,8 +1,11 @@
 // logic.js
 
 $(document).ready(function () {
+  console.log("jQuery version:", jQuery.fn.jquery);
+
   // Display the current day at the top of the calendar
   $("#currentDay").text(dayjs().format("dddd, MMMM D"));
+  dayjs().format('dddd/MMMM/D') 
 
 // Function to colour-code timeblocks based on past, present, or future
   function updateHourStyles() {
