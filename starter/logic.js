@@ -35,6 +35,8 @@ var blockHour = parseInt($(this).attr("data-hour"));
         }
   });
 }
+// Call loadEvents function 
+loadEvents();
 })
 
 // Function to save events to local storage
@@ -48,10 +50,8 @@ var blockHour = parseInt($(this).attr("data-hour"));
 });
 
 // load events, update timeblock styles, and set interval for continuous updating
-loadEvents();
 updateHourStyles();
 setInterval(function () {
-  updateHourstyles();
+  updateHourStyles();
   console.log("Hour style updated");
 }, 60000);
-});
