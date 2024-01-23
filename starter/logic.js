@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("#currentDay").text(dayjs().format("dddd, MMMM D"));
 
 // Function to colour-code timeblocks based on past, present, or future
-  function updateHourstyles() {
+  function updateHourStyles() {
     var currentHour = dayjs().hour();
 
   $(".time-block").each(function () {
@@ -15,7 +15,7 @@ var blockHour = parseInt($(this).attr("data-hour"));
 
      $textarea.removeClass("past present future");
 
-          if (clockHour < currentHour) {
+          if (blockHour < currentHour) {
            $textarea.addClass("past");
           } else if (blockHour === currentHour) {
             $textarea.addClass("present")
@@ -39,7 +39,7 @@ var blockHour = parseInt($(this).attr("data-hour"));
 
 // Function to save events to local storage
 
- $("saveBtn").on("click", function (){
+ $(".saveBtn").on("click", function () {
   var $hourBlock = $(this).parent();
   var hour = $hourBlock.attr("data-hour"); 
   var eventText = $hourBlock.find("textarea").val();
@@ -49,5 +49,9 @@ var blockHour = parseInt($(this).attr("data-hour"));
 
 // load events, update timeblock styles, and set interval for continuous updating
 loadEvents();
-updateHourstyles();
-setInterval(updateHourstyles, 60000);
+updateHourStyles();
+setInterval(function () {
+  updateHourstyles();
+  console.log("Hour style updated");
+}, 60000);
+});
