@@ -15,7 +15,7 @@ Allow users to enter an event when they click a time block.
 Save the event in local storage when the save button is clicked in that time block.
 Persist events between refreshes of a page.
 Screenshot
-
+![Alt text](image.png)
 Usage
 
 Open the Work Day Scheduler in your web browser.
