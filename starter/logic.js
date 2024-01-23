@@ -9,7 +9,7 @@ $(document).ready(function () {
     var currentHour = dayjs().hour();
 
   $(".time-block").each(function () {
-    var blockHour = parseInt($(this).attr("data.hour"));
+var blockHour = parseInt($(this).attr("data-hour"));
     var $textarea = $(this).find("textarea");
 
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
 
           if (clockHour < currentHour) {
            $textarea.addClass("past");
-          } else if (blockhour === currentHour) {
+          } else if (blockHour === currentHour) {
             $textarea.addClass("present")
           } else {
             $textarea.addClass("future");
@@ -48,6 +48,6 @@ $(document).ready(function () {
 });
 
 // load events, update timeblock styles, and set interval for continuous updating
-localEvents();
+loadEvents();
 updateHourstyles();
 setInterval(updateHourstyles, 60000);
