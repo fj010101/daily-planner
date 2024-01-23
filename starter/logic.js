@@ -46,3 +46,8 @@ $(document).ready(function () {
 
   localStorage.setItem("event-" + hour, eventText);
 });
+
+// load events, update timeblock styles, and set interval for continuous updating
+localEvents();
+updateHourstyles();
+setInterval(updateHourstyles, 60000);
