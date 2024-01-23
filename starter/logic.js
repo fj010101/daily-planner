@@ -42,8 +42,9 @@ loadEvents();
 // Function to save events to local storage
 
  $(".saveBtn").on("click", function () {
+  console.log("Save button clicked");
   var $hourBlock = $(this).parent();
-  var hour = $hourBlock.attr("data-hour"); 
+  var hour = parseInt($hourBlock.attr("data-hour"));
   var eventText = $hourBlock.find("textarea").val();
 
   localStorage.setItem("event-" + hour, eventText);
